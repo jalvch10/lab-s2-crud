@@ -10,7 +10,7 @@ import {
   Container,
   Form,
   Alert,
-  Spinner,
+  Spinner
 } from "react-bootstrap";
 
 export default function App() {
@@ -21,7 +21,7 @@ export default function App() {
       nombre: "Battle Cry",
       autor: "Annnora Laurie",
       publicacion: "2020-12-31",
-      disponible: true,
+      disponible: true
     },
     {
       isbn: "529766088-2",
@@ -29,7 +29,7 @@ export default function App() {
       nombre: "Skellig",
       autor: "Frannie Radbourne",
       publicacion: "2014-10-10",
-      disponible: false,
+      disponible: false
     },
     {
       isbn: "532647595-2",
@@ -37,7 +37,7 @@ export default function App() {
       nombre: "Varg Veum - Fallen Angels (Varg Veum - Falne Engler)",
       autor: "Vladamir Mullord",
       publicacion: "2012-11-09",
-      disponible: true,
+      disponible: true
     },
     {
       isbn: "293438648-1",
@@ -45,7 +45,7 @@ export default function App() {
       nombre: "Detective, The (C+ jing taam)",
       autor: "Michal Burbridge",
       publicacion: "1987-08-12",
-      disponible: false,
+      disponible: false
     },
     {
       isbn: "361667557-X",
@@ -53,7 +53,7 @@ export default function App() {
       nombre: "Beautiful",
       autor: "Edan Dwane",
       publicacion: "2012-04-04",
-      disponible: false,
+      disponible: false
     },
     {
       isbn: "946511871-0",
@@ -61,7 +61,7 @@ export default function App() {
       nombre: "Last Time I Committed Suicide",
       autor: "Carma Kinsella",
       publicacion: "7/9/2015",
-      disponible: false,
+      disponible: false
     },
     {
       isbn: "095511803-4",
@@ -69,7 +69,7 @@ export default function App() {
       nombre: "Cradle Will Rock",
       autor: "Kai Birchner",
       publicacion: "2001-04-29",
-      disponible: true,
+      disponible: true
     },
     {
       isbn: "869333714-9",
@@ -77,7 +77,7 @@ export default function App() {
       nombre: "Message to Garcia, A",
       autor: "Mathe Wildbore",
       publicacion: "1986-05-17",
-      disponible: true,
+      disponible: true
     },
     {
       isbn: "816638977-0",
@@ -85,7 +85,7 @@ export default function App() {
       nombre: "Agnes of God",
       autor: "Griff Gooly",
       publicacion: "2015-10-10",
-      disponible: false,
+      disponible: false
     },
     {
       isbn: "274133852-3",
@@ -93,8 +93,8 @@ export default function App() {
       nombre: "Opera Jawa",
       autor: "Mariya Brickstock",
       publicacion: "2003-11-10",
-      disponible: false,
-    },
+      disponible: false
+    }
   ]);
   const [show, setShow] = useState(false);
   const [showAdd, setShowAdd] = useState(false);
@@ -189,7 +189,7 @@ export default function App() {
         genero: genero,
         autor: autor,
         publicacion: publicacion,
-        disponible: disponible,
+        disponible: disponible
       };
       setData((user) => [...user, add]);
       setShowAlert(true);
@@ -220,7 +220,7 @@ export default function App() {
               background: "#000",
               zIndex: 1,
               position: "fixed",
-              width: "100%",
+              width: "100%"
             }}
           >
             <Button
@@ -248,7 +248,7 @@ export default function App() {
                       boxShadow: `6px 2px 16px 0px rgba(136, 165, 191, 0.48) , -6px -2px 16px 0px rgba(255, 255, 255, 0.8) `,
                       borderRadius: "20px",
                       padding: "1vh",
-                      width: "60%",
+                      width: "60%"
                     }}
                   >
                     <Card.Body>
@@ -441,7 +441,7 @@ export default function App() {
                     <Form.Label>Publicacion</Form.Label>
                     <br />
                     <input
-                      onChange={(e) => setDisponible(e.target.value)}
+                      onChange={(e) => setPublicacion(e.target.value)}
                       value={publicacion}
                       type="date"
                     />
