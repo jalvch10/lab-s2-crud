@@ -22,7 +22,6 @@ export default function App() {
       autor: "Annnora Laurie",
       publicacion: "2020-12-31",
       disponible: true,
-      foto: "https://robohash.org/ullamtemporaillo.jpg?size=250x250&set=set1",
     },
     {
       isbn: "529766088-2",
@@ -31,8 +30,6 @@ export default function App() {
       autor: "Frannie Radbourne",
       publicacion: "2014-10-10",
       disponible: false,
-      foto:
-        "https://robohash.org/consequaturvoluptatesut.jpg?size=250x250&set=set1",
     },
     {
       isbn: "532647595-2",
@@ -41,7 +38,6 @@ export default function App() {
       autor: "Vladamir Mullord",
       publicacion: "2012-11-09",
       disponible: true,
-      foto: "https://robohash.org/illotemporaut.jpg?size=250x250&set=set1",
     },
     {
       isbn: "293438648-1",
@@ -50,8 +46,6 @@ export default function App() {
       autor: "Michal Burbridge",
       publicacion: "1987-08-12",
       disponible: false,
-      foto:
-        "https://robohash.org/quaerataliquamsapiente.jpg?size=250x250&set=set1",
     },
     {
       isbn: "361667557-X",
@@ -60,7 +54,6 @@ export default function App() {
       autor: "Edan Dwane",
       publicacion: "2012-04-04",
       disponible: false,
-      foto: "https://robohash.org/quiasaepepariatur.jpg?size=250x250&set=set1",
     },
     {
       isbn: "946511871-0",
@@ -69,7 +62,6 @@ export default function App() {
       autor: "Carma Kinsella",
       publicacion: "7/9/2015",
       disponible: false,
-      foto: "https://robohash.org/laboresequidolores.jpg?size=250x250&set=set1",
     },
     {
       isbn: "095511803-4",
@@ -78,8 +70,6 @@ export default function App() {
       autor: "Kai Birchner",
       publicacion: "2001-04-29",
       disponible: true,
-      foto:
-        "https://robohash.org/errorpossimusfugiat.jpg?size=250x250&set=set1",
     },
     {
       isbn: "869333714-9",
@@ -88,7 +78,6 @@ export default function App() {
       autor: "Mathe Wildbore",
       publicacion: "1986-05-17",
       disponible: true,
-      foto: "https://robohash.org/autemvelitrerum.jpg?size=250x250&set=set1",
     },
     {
       isbn: "816638977-0",
@@ -97,7 +86,6 @@ export default function App() {
       autor: "Griff Gooly",
       publicacion: "2015-10-10",
       disponible: false,
-      foto: "https://robohash.org/cumutmagni.jpg?size=250x250&set=set1",
     },
     {
       isbn: "274133852-3",
@@ -106,8 +94,6 @@ export default function App() {
       autor: "Mariya Brickstock",
       publicacion: "2003-11-10",
       disponible: false,
-      foto:
-        "https://robohash.org/rationevoluptatemcorporis.jpg?size=250x250&set=set1",
     },
   ]);
   const [show, setShow] = useState(false);
@@ -146,6 +132,7 @@ export default function App() {
   };
 
   const handleUpdate = (item) => {
+    console.log(item);
     setShow(true);
     setNombre(item.nombre);
     setIsbn(item.isbn);
@@ -160,12 +147,14 @@ export default function App() {
 
     data.forEach((element) => {
       if (element.isbn === isbn) {
+        element.isbn = isbn;
         element.nombre = nombre;
         element.genero = genero;
         element.autor = autor;
         element.publicacion = publicacion;
         element.disponible = disponible;
         array.push(element);
+        console.log(array);
       }
     });
     setData((book) => [...book, array]);
@@ -417,6 +406,7 @@ export default function App() {
                     <Form.Label>ISBN</Form.Label>
                     <Form.Control
                       type="text"
+                      disabled
                       onChange={(e) => setIsbn(e.target.value)}
                       value={isbn}
                     />
