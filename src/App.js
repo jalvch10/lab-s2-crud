@@ -441,7 +441,7 @@ export default function App() {
                     <Form.Label>Publicacion</Form.Label>
                     <br />
                     <input
-                      onChange={(e) => console.log(e.target.value)}
+                      onChange={(e) => setDisponible(e.target.value)}
                       value={publicacion}
                       type="date"
                     />
